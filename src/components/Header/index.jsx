@@ -2,9 +2,9 @@
 
 const Header = () => {
     return (
-        <div>
-            
-        </div>
+        <header>
+            <h1>Buscador de Bebidas</h1>
+        </header>
     );
 }
 

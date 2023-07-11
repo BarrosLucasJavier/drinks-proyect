@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { CategoriesContext } from '../context/category.contex';
+import { DrinksContext } from '../context/drinks.context';
 
-export const useCategories = () =>{
-    return useContext(CategoriesContext)
+export const useDrinks = () =>{
+    return useContext(DrinksContext)
 }

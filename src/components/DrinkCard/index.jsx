@@ -1,11 +1,16 @@
 import { useDrinks } from '../../hooks/useDrinks';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { useCart } from '../../hooks/useCart'
 
 
 const DrinkCard = ({ drink }) => {
 
     const { handleModalClick, handleDrinkIdClick} = useDrinks();
+    const { addToCart } = useCart();
 
+    const handleAddToCart = (drink) => {
+        addToCart(drink)
+    }
 
 
     return (
@@ -19,7 +24,10 @@ const DrinkCard = ({ drink }) => {
                         handleModalClick();
                         handleDrinkIdClick(drink.idDrink)
                         }}>Ver receta</button>
-                    <button>
+                    <button
+                        className=''
+                        onClick={() => handleAddToCart(drink)}
+                    >
                         Agregar al Carrito
                     </button>
                 </div>

@@ -1,9 +1,14 @@
+import DrinkModal from "../../components/DrinkModal";
+import DrinksList from "../../components/DrinksList";
+import SearchForm from "../../components/SearchForm";
 
 
 const Home = () => {
     return (
         <main>
-            <h3>HOME</h3>
+            <SearchForm/>
+            <DrinksList/>
+            <DrinkModal/>
         </main>
     );
 }

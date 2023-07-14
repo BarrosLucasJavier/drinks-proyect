@@ -1,0 +1,10 @@
+:root{
+    --mainColor:#233F3A;
+    --secundaryColor: rgba(244, 117, 0, 0.88)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -1,0 +1,9 @@
+.headerIcon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 60%;
+    padding: 0.7rem;
+    background-color: var(--mainColor);
+    border-radius: 50%;
+}

@@ -2,17 +2,20 @@
     background-color: var(--mainColor);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 1rem;
     color:var(--secundaryColor);
     padding: 1rem;
+    position: relative;
+    border-bottom: 3px solid var(--secundaryColor);
+    min-height: 7rem;
 }
 .headerContainer img{
-    width: 10rem;
+    position: absolute;
+    bottom: -3.5rem;
+    max-height: 6rem;
     border-radius: 50%;
-}
-.headerIcon{
-    font-size: 2rem;
-    cursor: pointer;
+    margin: 0.7rem 0;
+
 }

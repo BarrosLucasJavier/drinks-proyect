@@ -1,9 +1,14 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDrinks } from '../../hooks/useDrinks';
 import DrinkCard from '../DrinkCard';
+import styles from './DrinkList.module.css'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import useModal from '../../hooks/useModal';
 
 
 const DrinksList = () => {
     const { drinks } = useDrinks();
+    const { toogleModal } = useModal()
 
     if (drinks.length === 0) {
         return (
@@ -15,6 +20,7 @@ const DrinksList = () => {
 
     return (
         <div>
+            <FontAwesomeIcon icon={faCartShopping} className={styles.headerIcon} onClick={toogleModal}/>
             {
                 drinks.map((drink) => (
                     <DrinkCard key={drink.idDrink} drink={drink}/>

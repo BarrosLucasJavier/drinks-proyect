@@ -4,7 +4,7 @@ export const cartInitialState = {
     cartItems:[],
 }
 
-export function cartReducer  (state, { type, payload }) {
+export function cartReducer  (state, { type, payload=[] }) {
 
     const { idDrink } = payload;
 

@@ -1,0 +1,38 @@
+.formContainer{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+.formContainer label{
+    padding-right: 0.7rem;
+    font-weight: 700;
+}
+.formContainer input, .formContainer select{
+    border: none;
+    padding: 0.2rem;
+    background-color: var(--secundaryColor);
+    color: var(--mainColor);
+    font-size: 1rem;
+    border-radius: 0 0.5rem 0 0.5rem;
+    max-width: 12rem;
+}
+
+.formContainer p{
+    box-shadow: 0 5px 5px rgb(138, 24, 24);
+    border-radius: 8px;
+    margin: 4px 0;
+    text-align: center;
+}
+.formContainer button{
+    border: none;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--secundaryColor);
+    border-radius: 0.8rem;
+    color: var(--mainColor);
+    font-size: 1rem;
+    font-weight: 700;
+}

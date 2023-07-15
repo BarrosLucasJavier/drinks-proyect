@@ -1,6 +1,7 @@
 import { useDrinks } from '../../hooks/useDrinks';
 import PropTypes from 'prop-types';
-import { useCart } from '../../hooks/useCart'
+import { useCart } from '../../hooks/useCart';
+import styles from './DrinkCard.module.css'
 
 
 const DrinkCard = ({ drink }) => {
@@ -14,12 +15,12 @@ const DrinkCard = ({ drink }) => {
 
 
     return (
-        <div>
+        <div className={styles.cardContainer}>
             <img src={drink.strDrinkThumb} alt={`Imagen de ${drink.strDrink}`}/>
-            <div>
+            <div className={styles.infoContainer}>
                 <h3>{drink.strDrink}</h3>
-                <span>{drink.price}</span>
-                <div>
+                <span>$ {drink.price}</span>
+                <div className={styles.buttonContainer}>
                     <button onClick={()=>{
                         handleModalClick();
                         handleDrinkIdClick(drink.idDrink)

@@ -2,6 +2,7 @@ import { Formik, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import { useCategories } from '../../hooks/useCategory';
 import { useDrinks } from '../../hooks/useDrinks';
+import style from  './SearchForm.module.css'
 
 const SearchForm = () => {
 
@@ -30,14 +31,14 @@ const SearchForm = () => {
         >
             {
                 (formik)=>(
-                    <form onSubmit={formik.handleSubmit}>
+                    <form onSubmit={formik.handleSubmit} className={style.formContainer}>
                         {
                             formik.status && (
                                 <p>{formik.status}</p>
                             )
                         }
                         <div>
-                            <label htmlFor='name'>Nombre Bebida</label>
+                            <label htmlFor='name'>Nombre Bebida:</label>
                             <Field
                                 id="name"
                                 type="text"
@@ -47,11 +48,11 @@ const SearchForm = () => {
                             />
                             <ErrorMessage
                                 name="name"
-                                className='text-danger'
+                                render={msg => <p>{msg}</p>}
                             />
                         </div>
-                        <div>
-                            <label htmlFor='category'>Categoria Bebida</label>
+                        <div className='text-danger'>
+                            <label htmlFor='category'>Categoria Bebida:</label>
                             <Field
                                 id="category"
                                 placeholder="- Seleccione Categoria -"
@@ -69,7 +70,7 @@ const SearchForm = () => {
                             </Field>
                             <ErrorMessage
                                 name='category'
-                                className='text-danger'
+                                render={msg => <p>{msg}</p>}
                             />
                         </div>
                         <div>

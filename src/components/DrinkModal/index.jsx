@@ -1,4 +1,5 @@
 import { useDrinks } from '../../hooks/useDrinks'
+import styles from './DrinkModal.module.css'
 
 const DrinkModal = () => {
 
@@ -22,13 +23,13 @@ const DrinkModal = () => {
 
     return (
         !loading && (
-            <div onClick={handleModalClick}>
-                <div>
-                    <div>
+            <div onClick={handleModalClick} className={styles.modalContainer}>
+                <div className={styles.recipeContainer}>
+                    <div className={styles.recipeHeader}>
                         <img src={recipe.strDrinkThumb} alt={`Imagen receta ${recipe.strDrink}`}/>
-                        <div>{recipe.strDrink}</div>
                     </div>
-                    <div>
+                    <div className={styles.recipeBody}>
+                        <h2>{recipe.strDrink}</h2>
                         <h3>Instrucciones</h3>
                         <p>{recipe.strInstructions}</p>
                         <h3>Ingredientes y Cantidades</h3>

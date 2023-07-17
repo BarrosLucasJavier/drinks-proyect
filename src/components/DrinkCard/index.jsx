@@ -2,6 +2,8 @@ import { useDrinks } from '../../hooks/useDrinks';
 import PropTypes from 'prop-types';
 import { useCart } from '../../hooks/useCart';
 import styles from './DrinkCard.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookOpen, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 const DrinkCard = ({ drink }) => {
@@ -16,22 +18,25 @@ const DrinkCard = ({ drink }) => {
 
     return (
         <div className={styles.cardContainer}>
-            <img src={drink.strDrinkThumb} alt={`Imagen de ${drink.strDrink}`}/>
+            <div className={styles.cardImg}>
+                <img src={drink.strDrinkThumb} alt={`Imagen de ${drink.strDrink}`}/>
+            </div>
             <div className={styles.infoContainer}>
                 <h3>{drink.strDrink}</h3>
-                <span>$ {drink.price}</span>
-                <div className={styles.buttonContainer}>
-                    <button onClick={()=>{
+                <div className={styles.recipe}>
+                    <span>$ {drink.price}</span>
+                    <FontAwesomeIcon className={styles.recipeIcon} icon={faBookOpen} onClick={() =>{
                         handleModalClick();
                         handleDrinkIdClick(drink.idDrink)
-                        }}>Ver receta</button>
-                    <button
-                        className=''
-                        onClick={() => handleAddToCart(drink)}
-                    >
-                        Agregar al Carrito
-                    </button>
+                    }}/>
                 </div>
+                <button
+                    className=''
+                    onClick={() => handleAddToCart(drink)}
+                >
+                    <FontAwesomeIcon icon={faCartShopping}/>
+                    Agregar al Carrito
+                </button>
             </div>
         </div>
     );

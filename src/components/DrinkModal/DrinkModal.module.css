@@ -1,0 +1,26 @@
+.modalContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.605);
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recipeContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    border-radius: 15px;
+    background-color: white;
+}
+.recipeHeader img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}

@@ -1,55 +1,68 @@
 .cardContainer{
-    max-width: 85vw;
-    border: 2px solid var(--secundaryColor);
+    display: flex;
+    flex-direction: column;
     margin: 1rem auto;
-    border-radius: 0 1rem 0 1rem;
-    box-shadow: 0 0 20px black;
-    padding: 0.5rem;
-    background-color: #313837;
-}
-.cardContainer:hover{
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.56);
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    border-radius: 15px;
+    background-color: var(--secundaryColor);
 }
 .cardContainer img{
     width: 100%;
-    border-radius: 0 1rem 0 0;
-    object-fit: scale-down;
+    border-radius: 15px 15px 0 0;
+}
+.infoContainer::before{
+    content: '';
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(0deg, rgba(244,117,0,0.88) 0%, rgba(244,117,0,0) 100%);
+    position: absolute;
+    top: -39px;
+    left: 0;
 }
 .infoContainer{
-    padding: 0.7rem;
+    padding: 22px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-evenly;
+    gap: 15px;
+    color: var(--mainColor);
+    position: relative;
 }
-.infoContainer h3{
-    font-size: 1.3rem;
-    text-shadow: 0 5px 10px black;
+.infoContainer h3 {
+    font-family: "Fraunces", serif;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
 }
-.infoContainer span{
-    padding: 1rem;
-    border-radius: 1rem;
+.infoContainer button{
     background-color: var(--mainColor);
-    font-size: 1rem;
-}
-.buttonContainer{
-    width: 100%;
+    color: var(--secundaryColor);
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
     display: flex;
     align-items: center;
-}
-.buttonContainer button{
-    width: 48%;
-    margin: 0 1%;
-    padding: 0.5rem 0.7rem;
-    background-color: var(--secundaryColor);
-    border: none;
-    border-radius: 1rem;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
     cursor: pointer;
-    color: var(--mainColor);
-    font-weight: 700;
-    height: 3rem;
+    transition: all 0.5s;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.729));
 }
-.buttonContainer button:hover{
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.56);
+.infoContainer button:hover{
+    filter: drop-shadow(0 10px 10px rgb(255, 254, 254));
+}
+.recipe{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+.recipeIcon{
+    cursor: pointer;
+    filter: drop-shadow(0 10px 10px black);
+    transition: all 0.5s;
+}
+.recipeIcon:hover{
+    filter: drop-shadow(0 10px 10px rgb(255, 254, 254));
 }

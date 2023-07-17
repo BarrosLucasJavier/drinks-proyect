@@ -16,11 +16,38 @@
     margin: auto;
     width: 90vw;
     max-width: 340px;
-    height: auto;
+    max-height: 90vh;
     border-radius: 15px;
-    background-color: white;
+    background-color:var(--mainColor);
+    overflow-y: scroll;
 }
 .recipeHeader img{
     width: 100%;
     border-radius: 15px 15px 0 0;
+}
+.recipeBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.7rem;
+    padding: 0.7rem;
+}
+.recipeBody h2, .recipeBody h3{
+    font-family: "Fraunces", serif;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 5px black;
+}
+.recipeBody h3{
+    text-decoration: underline;
+    margin-top: 0.7rem;
+}
+.recipeBody p{
+    font-size: 0.9rem;
+    text-align: justify;
+    
+}
+.recipeBody li{
+    padding: 0.5rem;
+    list-style: none;
+    font-size: 0.9rem;
 }

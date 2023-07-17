@@ -28,8 +28,10 @@ export default function CartModal (){
                         ))}
                     </div>
                     <aside>
-                        <p>Subtotal: {orderTotal}</p>
-                        <p>Total: xxxxxx</p>
+                        <div className={styles.modalTotal}>
+                            <p>Subtotal: ${orderTotal}</p>
+                            <p>Total: ${orderTotal}</p>
+                        </div>
                         <div className={styles.btnContainer}>
                             <button className={styles.clear} onClick={clearCart}>Vaciar carrito</button>
                             <button className={styles.confirmOrder} onClick={sendOrder}>Confirmar Compra</button>

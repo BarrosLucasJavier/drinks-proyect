@@ -10,8 +10,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
-body{
+#root{
     background-color: var(--mainColor);
     color: var(--secundaryColor);
     font-size: 1rem;
+    min-height: 100vh;
 }

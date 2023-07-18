@@ -17,5 +17,7 @@
     max-height: 6rem;
     border-radius: 50%;
     margin: 0.7rem 0;
-
+}
+.headerContainer h1{
+    font-size: 1.5rem;
 }

@@ -12,21 +12,21 @@ const DrinksList = () => {
 
     if (drinks.length === 0) {
         return (
-            <div>
+            <div className={styles.listContainer}>
                 <h2>No hay resultados</h2>
             </div>
         )
     }
 
     return (
-        <div>
+        <section className={styles.listContainer}>
             <FontAwesomeIcon icon={faCartShopping} className={styles.headerIcon} onClick={toogleModal}/>
             {
                 drinks.map((drink) => (
                     <DrinkCard key={drink.idDrink} drink={drink}/>
                 ))
             }
-        </div>
+        </section>
     );
 }
 

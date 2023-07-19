@@ -33,14 +33,17 @@
 .btnContainer button{
     width: 45%;
     margin: 0 0.5rem;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid var(--secundaryColor);
+    padding: 0.8rem 1.6rem;
     background-color: var(--secundaryColor);
+    border-radius: 0.8rem;
     color: var(--mainColor);
+    font-size: 1rem;
+    font-weight: 700;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
     cursor: pointer;
-    transition: all 0.5s;
-    filter: drop-shadow(0 5px 5px black);
+    transition: background-color, color, filter 0.5s;
+    
 }
 .btnContainer button:hover{
     filter: drop-shadow(0 5px 5px rgb(255, 254, 254));

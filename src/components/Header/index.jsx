@@ -4,10 +4,12 @@ import logo from '../../assets/images/logo.png'
 const Header = () => {
 
     return (
-        <header className={styles.headerContainer}>
-            <h1>Buscador de Bebidas</h1>
-            <img src={logo} alt="Logo Bebidas"/>
-        </header>
+        
+            <header className={styles.headerContainer}>
+                <h1>Buscador de Bebidas</h1>
+                <img src={logo} alt="Logo Bebidas"/>
+            </header>
+        
     );
 }
 

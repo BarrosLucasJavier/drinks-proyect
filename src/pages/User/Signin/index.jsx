@@ -27,13 +27,12 @@ export default function SignIn() {
     
 
     return (
-        <div className={styles.signIn}>
+        <main className={styles.signIn}>
             <ThemeProvider theme={defaultTheme}>
-                <Container component="main" maxWidth="xs" sx={{backgroundColor:colors.main}}>
+                <Container  maxWidth="xs" sx={{backgroundColor:colors.main}}>
                     <CssBaseline />
                     <Box
                         sx={{
-                            marginTop: 8,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -141,6 +140,6 @@ export default function SignIn() {
                     </Box>
                 </Container>
             </ThemeProvider>
-        </div>
+        </main>
     );
 }

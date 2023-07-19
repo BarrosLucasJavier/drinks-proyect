@@ -36,22 +36,26 @@
     line-height: 1.8rem;
 }
 .infoContainer button{
+    border: 1px solid var(--mainColor);
+    padding: 0.8rem 1.6rem;
     background-color: var(--mainColor);
+    border-radius: 0.8rem;
     color: var(--secundaryColor);
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
+    cursor: pointer;
+    transition: all 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.5s;
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.729));
 }
 .infoContainer button:hover{
-    filter: drop-shadow(0 10px 10px rgb(255, 254, 254));
+    border: 1px solid var(--mainColor);
+    background-color: var(--secundaryColor);
+    color: var(--mainColor);
+    filter: drop-shadow(0 3px 3px rgba(255, 255, 255, 0.51));
 }
 .recipe{
     display: flex;

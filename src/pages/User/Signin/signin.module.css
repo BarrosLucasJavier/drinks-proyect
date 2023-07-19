@@ -1,7 +1,8 @@
 .signIn{
     background-color: var(--mainColor);
-    margin-bottom: 1rem;
-    min-height: calc(100vh - 219px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .links{
     color:var(--secundaryColor)

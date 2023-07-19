@@ -15,4 +15,19 @@
     color: var(--secundaryColor);
     font-size: 1rem;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: 7rem auto 7rem;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
 }

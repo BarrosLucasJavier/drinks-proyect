@@ -8,10 +8,12 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <small>Drinks App</small>
-            <img onClick={() => {window.open('https://www.pinterest.com/','_blank')}} src={pinterest}/>
-            <img onClick={() => window.open('https://www.twitter.com','_blank')} src={twitter}/>
-            <img onClick={() => window.open('https://www.instagram.com','_blank')} src={instagram}/>
-            <img onClick={() => window.open('https://www.facebook.com','_blank')} src={facebook}/>
+            <div className={styles.iconContainer}>
+                <img onClick={() => {window.open('https://www.pinterest.com/','_blank')}} src={pinterest}/>
+                <img onClick={() => window.open('https://www.twitter.com','_blank')} src={twitter}/>
+                <img onClick={() => window.open('https://www.instagram.com','_blank')} src={instagram}/>
+                <img onClick={() => window.open('https://www.facebook.com','_blank')} src={facebook}/>
+            </div>
             <small>&copy; Copyrigth 2023</small>
         </footer>
     );

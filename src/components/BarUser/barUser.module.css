@@ -6,19 +6,23 @@
     align-items: center;
 }
 .barContainer button{
-    color: var(--mainColor);
+    border: 1px solid var(--secundaryColor);
+    padding: 0.4rem 0.8rem;
     background-color: var(--secundaryColor);
-    border: none;
-    padding: 0.5rem 0.7rem;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
+    color: var(--mainColor);
+    font-size: 1rem;
+    font-weight: 700;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
     cursor: pointer;
-    border: 1px solid var(--mainColor);
-    transition: all 0.5s;
+    transition: background-color, color, filter 0.5s;
+
 }   
 .barContainer button:hover{
-    color: var(--secundaryColor);
-    background-color: var(--mainColor);
     border: 1px solid var(--secundaryColor);
+    background-color: var(--mainColor);
+    color: var(--secundaryColor);
+    filter: drop-shadow(0 3px 3px rgba(255, 255, 255, 0.51));
 }   
 .barIcon{
     margin: 0 0.5rem;

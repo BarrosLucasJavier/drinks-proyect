@@ -34,7 +34,7 @@ function AuthProvider ({ children }){
                     return Promise.reject(res)
                 }
             })
-            .catch(error => alert(JSON.stringify(error)))
+            .catch(error => alert(error))
     }
     function login(data){
         userLogin(data)
@@ -46,10 +46,11 @@ function AuthProvider ({ children }){
                     setCurrentUser(user);
                     return navigate("/")
                 }else{
+                    console.log("respuesta",res);
                     return Promise.reject(res)
                 }
             })
-            .catch(error => alert(JSON.stringify(error)))
+            .catch(error => alert(error))
     }
 
     function logout () {

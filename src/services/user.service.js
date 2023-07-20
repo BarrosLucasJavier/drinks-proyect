@@ -9,16 +9,17 @@ export const userRegister = async (body) =>{
         return data;
     } catch (error) {
         console.error(error);
-        throw new Error("Hubo un error al registrar el usuario.")
+        throw new Error(error.response.data.message)
     }
 }
 export const userLogin = async (body) =>{
     try {
         const url = `${apiUrl}/login`;
         const { data } = await axios.post(url, body);
+        console.log("data service",data);
         return data;
     } catch (error) {
-        console.error(error);
-        throw new Error("Hubo un error al loguear el usuario.")
+        console.error(error.response.data.message);
+        throw new Error(error.response.data.message)
     }
 }

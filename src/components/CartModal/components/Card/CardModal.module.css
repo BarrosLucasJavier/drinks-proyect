@@ -39,3 +39,12 @@
     color: var(--secundaryColor);
     cursor: pointer;
 }
+
+@media (min-width:700px){
+    .cardBody{
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 1.2rem;
+    }
+
+}

@@ -4,18 +4,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
 }
 .barContainer button{
     border: 1px solid var(--secundaryColor);
     padding: 0.4rem 0.8rem;
     background-color: var(--secundaryColor);
     border-radius: 0.8rem;
-    color: var(--mainColor);
+    color: var(--textColor);
     font-size: 1rem;
     font-weight: 700;
-    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
     cursor: pointer;
-    transition: background-color, color, filter 0.5s;
+    transition: all 0.5s;
 
 }   
 .barContainer button:hover{

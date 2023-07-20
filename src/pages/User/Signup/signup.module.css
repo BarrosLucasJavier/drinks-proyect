@@ -1,3 +1,6 @@
 .links{
-    color: var(--secundaryColor);
+    color: var(--textColor);
+}
+.signup input, .signup div, .signup label{
+    color: var(--textColor) !important;
 }

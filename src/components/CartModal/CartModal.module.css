@@ -33,18 +33,22 @@
 .btnContainer button{
     width: 45%;
     margin: 0 0.5rem;
-    border: 1px solid var(--secundaryColor);
     padding: 0.8rem 1.6rem;
-    background-color: var(--secundaryColor);
     border-radius: 0.8rem;
-    color: var(--mainColor);
+    border: 1px solid var(--secundaryColor);
+    background-color: var(--secundaryColor);
+    color: var(--textColor);
     font-size: 1rem;
     font-weight: 700;
     filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
     cursor: pointer;
-    transition: background-color, color, filter 0.5s;
+    transition: all 0.5s;
     
 }
 .btnContainer button:hover{
     filter: drop-shadow(0 5px 5px rgb(255, 254, 254));
+}
+.noresults{
+    margin: 1.3rem auto;
+    text-align: center;
 }

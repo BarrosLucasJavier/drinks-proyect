@@ -15,10 +15,10 @@
     border: none;
     padding: 0.2rem;
     background-color: var(--secundaryColor);
-    color: var(--mainColor);
+    color: var(--textColor);
     font-size: 1rem;
     border-radius: 0 0.5rem 0 0.5rem;
-    max-width: 12rem;
+    max-width: 10rem;
 }
 
 .formContainer p{
@@ -32,7 +32,7 @@
     padding: 0.4rem 0.8rem;
     background-color: var(--secundaryColor);
     border-radius: 0.8rem;
-    color: var(--mainColor);
+    color: var(--textColor);
     font-size: 1rem;
     font-weight: 700;
     filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
@@ -44,4 +44,14 @@
     background-color: var(--mainColor);
     color: var(--secundaryColor);
     filter: drop-shadow(0 3px 3px rgba(255, 255, 255, 0.51));
+}
+
+@media (min-width:700px){
+    .formContainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+        font-size: 1.3rem;
+    }
 }

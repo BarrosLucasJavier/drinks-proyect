@@ -5,11 +5,13 @@
     justify-content: start;
     align-items: center;
     gap: 1rem;
-    color:var(--secundaryColor);
+    color:var(--textColor);
     padding: 1rem;
     position: relative;
     border-bottom: 3px solid var(--secundaryColor);
     min-height: 7rem;
+    filter: drop-shadow(0 0px 15px rgba(0, 0, 0, 0.555));
+
 }
 .headerContainer img{
     position: absolute;
@@ -20,4 +22,6 @@
 }
 .headerContainer h1{
     font-size: 1.5rem;
+    filter: drop-shadow(0 0px 15px rgba(0, 0, 0, 0.555));
+
 }

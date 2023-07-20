@@ -17,4 +17,13 @@
     min-width: 50vw;
     display: flex;
     justify-content: space-evenly;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
+}
+
+@media (min-width:700px){
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.7rem;
+    }
 }

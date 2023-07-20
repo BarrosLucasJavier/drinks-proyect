@@ -7,6 +7,7 @@
     height: auto;
     border-radius: 15px;
     background-color: var(--secundaryColor);
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
 }
 .cardContainer img{
     width: 100%;
@@ -25,10 +26,12 @@
     padding: 22px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    min-height: 220px;
     gap: 15px;
-    color: var(--mainColor);
+    color: var(--textColor);
     position: relative;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
 }
 .infoContainer h3 {
     font-family: "Fraunces", serif;
@@ -40,10 +43,9 @@
     padding: 0.8rem 1.6rem;
     background-color: var(--mainColor);
     border-radius: 0.8rem;
-    color: var(--secundaryColor);
+    color: var(--textColor);
     font-size: 1rem;
     font-weight: 700;
-    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.51));
     cursor: pointer;
     transition: all 0.5s;
     display: flex;
@@ -64,9 +66,8 @@
 }
 .recipeIcon{
     cursor: pointer;
-    filter: drop-shadow(0 10px 10px black);
     transition: all 0.5s;
 }
 .recipeIcon:hover{
-    filter: drop-shadow(0 10px 10px rgb(255, 254, 254));
+    filter: drop-shadow(0 3px 3px rgba(255, 255, 255, 0.51));
 }

@@ -24,8 +24,8 @@ export default function SignUp() {
     const { register } = useAuth();
 
     return (
-        <ThemeProvider theme={defaultTheme}>
-            <Container component="main" maxWidth="xs">
+        <ThemeProvider theme={defaultTheme} >
+            <Container className={styles.signup} component="main" maxWidth="xs">
                 <CssBaseline />
                 <Box
                     sx={{

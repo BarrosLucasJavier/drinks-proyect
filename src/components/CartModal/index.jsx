@@ -22,7 +22,7 @@ export default function CartModal (){
                 <h2>Mi Carrito</h2>
                 <section className={styles.modalBody}>
                     <div className={styles.modalDrinkListContainer}>
-                    {cart.cartItems.length === 0 && <h3>No hay productos en el carrito</h3>}
+                    {cart.cartItems.length === 0 && <h3 className={styles.noresults}>No hay productos en el carrito</h3>}
                         {cart.cartItems.map((drink) => (
                             <ModalCard key={drink.idDrink} drink={drink}/>
                         ))}

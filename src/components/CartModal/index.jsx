@@ -15,31 +15,36 @@ export default function CartModal (){
             orderTotal
         } = useCart();
 
-    return ( isOpen && (
-        <div className={styles.modalBg}>
-            <div className={styles.modal}>
-                <FontAwesomeIcon icon={faXmarkCircle} className={styles.icon} onClick={toogleModal}/>
-                <h2>Mi Carrito</h2>
-                <section className={styles.modalBody}>
-                    <div className={styles.modalDrinkListContainer}>
-                    {cart.cartItems.length === 0 && <h3 className={styles.noresults}>No hay productos en el carrito</h3>}
-                        {cart.cartItems.map((drink) => (
-                            <ModalCard key={drink.idDrink} drink={drink}/>
-                        ))}
+    if(isOpen){
+        document.body.style.overflow = 'hidden'
+        return (
+                <div className={styles.modalBg}>
+                    <div className={styles.modal}>
+                        <FontAwesomeIcon icon={faXmarkCircle} className={styles.icon} onClick={toogleModal}/>
+                        <h2>Mi Carrito</h2>
+                        <section className={styles.modalBody}>
+                            <div className={styles.modalDrinkListContainer}>
+                            {cart.cartItems.length === 0 && <h3 className={styles.noresults}>No hay productos en el carrito</h3>}
+                                {cart.cartItems.map((drink) => (
+                                    <ModalCard key={drink.idDrink} drink={drink}/>
+                                ))}
+                            </div>
+                            <aside>
+                                <div className={styles.modalTotal}>
+                                    <p>Subtotal: ${orderTotal}</p>
+                                    <p>Total: ${orderTotal}</p>
+                                </div>
+                                <div className={styles.btnContainer}>
+                                    <button className={styles.clear} onClick={clearCart}>Vaciar carrito</button>
+                                    <button className={styles.confirmOrder} onClick={sendOrder}>Confirmar Compra</button>
+                                </div>
+                            </aside>
+                        </section>
                     </div>
-                    <aside>
-                        <div className={styles.modalTotal}>
-                            <p>Subtotal: ${orderTotal}</p>
-                            <p>Total: ${orderTotal}</p>
-                        </div>
-                        <div className={styles.btnContainer}>
-                            <button className={styles.clear} onClick={clearCart}>Vaciar carrito</button>
-                            <button className={styles.confirmOrder} onClick={sendOrder}>Confirmar Compra</button>
-                        </div>
-                    </aside>
-                </section>
-            </div>
-        </div>)
-    )
+                </div>)
+    }else{
+        document.body.style.overflow = 'auto'
+    }
+    
 }
 

@@ -17,7 +17,7 @@
     content: '';
     width: 100%;
     height: 35px;
-    background: linear-gradient(0deg, rgba(244,117,0,0.88) 0%, rgba(244,117,0,0) 100%);
+    background: linear-gradient(0deg, var(--secundaryColor) 0%, rgba(244,117,0,0) 100%);
     position: absolute;
     top: -39px;
     left: 0;

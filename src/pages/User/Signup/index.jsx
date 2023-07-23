@@ -12,14 +12,16 @@ import { Formik } from 'formik';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../../hooks/useAuth'
 import styles from './signup.module.css'
+import { useTheme } from '../../../hooks/useTheme';
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
 
+    const { theme } = useTheme()
     const colors = {
-        main:'#233F3A',
-        secundary:'rgba(244, 117, 0, 0.88)'
+        main: theme.dark[1],
+        secundary:theme.light[1]
     };
     const { register } = useAuth();
 
@@ -80,7 +82,7 @@ export default function SignUp() {
                                 handleBlur,
                                 handleSubmit
                             }) => (
-                                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3, mb:3}} className={styles.singupContainer}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <TextField
@@ -100,7 +102,6 @@ export default function SignUp() {
                                                 input : {color:colors.secundary},
                                                 label: {color:colors.secundary}
                                                 }} 
-                                                color="warning"
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -120,7 +121,6 @@ export default function SignUp() {
                                                 input : {color:colors.secundary},
                                                 label: {color:colors.secundary}
                                                 }} 
-                                                color='warning'
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -140,7 +140,6 @@ export default function SignUp() {
                                                 input : {color:colors.secundary},
                                                 label: {color:colors.secundary}
                                                 }} 
-                                                color='warning'
                                             />
                                         </Grid>
                                     </Grid>
@@ -148,8 +147,7 @@ export default function SignUp() {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2 }}
-                                        color='warning'
+                                        sx={{ mt: 3, mb: 2 , backgroundColor:colors.secundary}}
                                     >
                                         Registrarme
                                     </Button>

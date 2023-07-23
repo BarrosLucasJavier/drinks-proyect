@@ -10,3 +10,6 @@
 .signIn input, .signIn div, .signIn label{
     color: var(--textColor) !important;
 }
+.inputSign fieldset{
+    border: var(--secundaryColor) 2px solid;
+}

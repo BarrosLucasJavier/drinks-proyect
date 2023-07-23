@@ -7,12 +7,14 @@ import { ModalProvider } from './context/ModalProvider'
 import { AuthProvider } from './context/AuthProvider'
 import {BrowserRouter as Router} from 'react-router-dom';
 import './index.css'
+import { ThemesProvider } from './context/ThemeProvider'
 
 function App() {
   
 
   return (
     <Router>
+    <ThemesProvider>
       <AuthProvider>
         <ModalProvider>
           <CartProvider>
@@ -26,6 +28,7 @@ function App() {
           </CartProvider>
         </ModalProvider>
       </AuthProvider>
+      </ThemesProvider>
     </Router>
   )
 }

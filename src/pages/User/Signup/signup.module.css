@@ -4,3 +4,6 @@
 .signup input, .signup div, .signup label{
     color: var(--textColor) !important;
 }
+.singupContainer fieldset{
+    border: var(--secundaryColor) 2px solid;
+}

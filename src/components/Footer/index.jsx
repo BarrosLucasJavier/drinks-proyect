@@ -1,18 +1,17 @@
 import styles from './footer.module.css';
-import pinterest from '../../assets/images/pinterest.png'
-import twitter from '../../assets/images/twitter.png'
-import instagram from '../../assets/images/instagram.png'
-import facebook from '../../assets/images/facebook.png'
+import { useTheme } from '../../hooks/useTheme'
 
 const Footer = () => {
+    const { theme } = useTheme();
+    
     return (
         <footer className={styles.footer}>
             <small>Drinks App</small>
             <div className={styles.iconContainer}>
-                <img onClick={() => {window.open('https://www.pinterest.com/','_blank')}} src={pinterest}/>
-                <img onClick={() => window.open('https://www.twitter.com','_blank')} src={twitter}/>
-                <img onClick={() => window.open('https://www.instagram.com','_blank')} src={instagram}/>
-                <img onClick={() => window.open('https://www.facebook.com','_blank')} src={facebook}/>
+                <img onClick={() => {window.open('https://www.pinterest.com/','_blank')}} src={`${theme.icons}pinterest.png`}/>
+                <img onClick={() => window.open('https://www.twitter.com','_blank')} src={`${theme.icons}twitter.png`}/>
+                <img onClick={() => window.open('https://www.instagram.com','_blank')} src={`${theme.icons}instagram.png`}/>
+                <img onClick={() => window.open('https://www.facebook.com','_blank')} src={`${theme.icons}facebook.png`}/>
             </div>
             <small>&copy; Copyrigth 2023</small>
         </footer>

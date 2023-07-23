@@ -1,13 +1,15 @@
 import styles from './Header.module.css'
-import logo from '../../assets/images/logo.png'
+import { useTheme } from '../../hooks/useTheme'
 
 const Header = () => {
 
+    const { theme } = useTheme()
+    
     return (
         
             <header className={styles.headerContainer}>
                 <h1>Buscador de Bebidas</h1>
-                <img src={logo} alt="Logo Bebidas"/>
+                <img src={theme.img} alt="Logo Bebidas"/>
             </header>
         
     );

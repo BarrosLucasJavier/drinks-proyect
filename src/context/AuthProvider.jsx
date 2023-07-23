@@ -4,6 +4,7 @@ import jwt_decode from 'jwt-decode'
 import PropTypes from 'prop-types'
 import {userLogin, userRegister} from '../services/user.service'
 
+
 const AuthContext = createContext();
 
 function AuthProvider ({ children }){
@@ -56,6 +57,7 @@ function AuthProvider ({ children }){
     function logout () {
         setCurrentUser(null);
         localStorage.removeItem("_token");
+        localStorage.removeItem("_theme");
         navigate("/login")
     }
 

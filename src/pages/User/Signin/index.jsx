@@ -12,24 +12,27 @@ import { Formik } from 'formik';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../../hooks/useAuth';
 import styles from './signin.module.css'
-
+import { useTheme } from '../../../hooks/useTheme'
 
 
 const defaultTheme = createTheme();
 
 export default function SignIn() {
 
-    const {login} = useAuth()
+    const { theme } = useTheme()
+    const { login } = useAuth()
+
     const colors = {
-        main:'#233F3A',
-        secundary:'rgba(244, 117, 0, 0.88)'
+        main: theme.dark[1],
+        secundary: theme.light[1]
     };
+
     
 
     return (
         <main className={styles.signIn}>
             <ThemeProvider theme={defaultTheme}>
-                <Container  maxWidth="xs" sx={{backgroundColor:colors.main}}>
+                <Container maxWidth="xs" sx={{ backgroundColor: colors.main, mt:6, mb:5 }}>
                     <CssBaseline />
                     <Box
                         sx={{
@@ -38,7 +41,7 @@ export default function SignIn() {
                             alignItems: 'center',
                         }}
                     >
-                        <Avatar sx={{ m: 1, bgcolor: colors.secundary, color:colors.main }}>
+                        <Avatar sx={{ m: 1, bgcolor: colors.secundary, color: colors.main }}>
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
@@ -79,7 +82,7 @@ export default function SignIn() {
                                     handleBlur,
                                     handleSubmit,
                                 }) => (
-                                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} className={styles.inputSign}>
                                         <TextField
                                             margin="normal"
                                             fullWidth
@@ -93,11 +96,11 @@ export default function SignIn() {
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                             helperText={errors.email && touched.email && errors.email}
-                                            sx={{ 
-                                                input : {color:colors.secundary},
-                                                label: {color:colors.secundary}
-                                                }}                                    
-                                            color="warning"
+                                            sx={{
+                                                input: { color: colors.secundary },
+                                                label: { color: colors.secundary },
+                                            }}
+
                                         />
                                         <TextField
                                             margin="normal"
@@ -106,11 +109,10 @@ export default function SignIn() {
                                             label="Contraseña"
                                             type="password"
                                             id="password"
-                                            sx={{ 
-                                                input : {color:colors.secundary},
-                                                label: {color:colors.secundary}
-                                                }}                                    
-                                            color="warning"
+                                            sx={{
+                                                input: { color: colors.secundary },
+                                                label: { color: colors.secundary }
+                                            }}
                                             value={values.password}
                                             error={errors.password && touched.password}
                                             onChange={handleChange}
@@ -121,12 +123,14 @@ export default function SignIn() {
                                             type="submit"
                                             fullWidth
                                             variant="contained"
-                                            sx={{mt: 3,mb: 2,}}
-                                            color='warning'
+                                            sx={{ mt: 3,
+                                                mb: 2,
+                                                backgroundColor:colors.secundary,
+                                                "&_:hover":colors.main }}
                                         >
                                             Iniciar
                                         </Button>
-                                        <Grid container>
+                                        <Grid container sx={{mt:3,mb:4}}>
                                             <Grid item>
                                                 <Link to="/register" variant="body2" className={styles.links}>
                                                     {"No tienes cuenta? Registrate"}

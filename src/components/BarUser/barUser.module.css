@@ -16,6 +16,7 @@
     font-weight: 700;
     cursor: pointer;
     transition: all 0.5s;
+    margin: 0 0.7rem;
 
 }   
 .barContainer button:hover{

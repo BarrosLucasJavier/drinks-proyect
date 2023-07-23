@@ -11,8 +11,8 @@ const AppRoutes = () => {
             <Route path='/login' element={<SignIn />} />
             <Route path='/register' element={<SignUp />} />
 
-            <Route path='/' element={<ProtectedRoute />}>
-                <Route path='/' element={<Home />} />
+            <Route exact path='/' element={<ProtectedRoute />}>
+                <Route exact path='/' element={<Home />} />
             </Route>
 
             <Route path='*' element={<NotFound />} />

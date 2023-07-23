@@ -23,7 +23,7 @@ Los usuarios deben ser capaces de:
 
 ### Screenshot
 
-![Muestra 1](./public/screenshots/)
+![Muestra 1](./src/assets/images/Screenshot.png)
 
 
 ### Links

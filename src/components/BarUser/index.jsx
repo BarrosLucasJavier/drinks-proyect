@@ -10,23 +10,23 @@ const BarUser = () => {
     const { currentUser, logout } = useAuth()
     const { handleModalThemes } = useTheme()
 
-    if(currentUser){
+    if (currentUser) {
         return (
             <div className={styles.barContainer}>
                 <h3>{currentUser.name}</h3>
                 <div>
-                <button onClick={handleModalThemes}>
-                    <FontAwesomeIcon icon={faPalette} className={styles.barIcon}/>
-                    Temas
-                </button>
-                <button onClick={ logout }>
-                    <FontAwesomeIcon icon={faSignOut} className={styles.barIcon}/>
-                    Salir
-                </button>
+                    <button onClick={handleModalThemes}>
+                        <FontAwesomeIcon icon={faPalette} className={styles.barIcon} />
+                        Temas
+                    </button>
+                    <button onClick={logout}>
+                        <FontAwesomeIcon icon={faSignOut} className={styles.barIcon} />
+                        Salir
+                    </button>
                 </div>
             </div>
         );
-    }else{
+    } else {
         return
     }
 }

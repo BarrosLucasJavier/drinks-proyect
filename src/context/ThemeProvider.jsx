@@ -11,7 +11,7 @@ export const ThemesProvider = ({ children }) => {
     const [modalThemes, setModalThemes] = useState(false);
     const storedTheme = localStorage.getItem("_theme");
 
-    if (theme.index === 5){
+    if (theme.index === 5) {
         document.documentElement.style.setProperty("--mainColor", palettes[5].dark[1])
         document.documentElement.style.setProperty("--secundaryColor", palettes[5].light[1])
         document.documentElement.style.setProperty("--textColor", palettes[5].text)

@@ -16,20 +16,20 @@ const DrinksList = () => {
         return (
             <>
                 <div className={styles.listContainerAlter}>
-                    <img src={theme.coctel} alt='Imagen de fondo de bebidas'/>
+                    <img src={theme.coctel} alt='Imagen de fondo de bebidas' />
                     <h2>No hay resultados</h2>
                 </div>
-                <FontAwesomeIcon icon={faCartShopping} className={styles.headerIcon} onClick={toogleModal}/>
+                <FontAwesomeIcon icon={faCartShopping} className={styles.headerIcon} onClick={toogleModal} />
             </>
         )
     }
 
     return (
         <section className={styles.listContainer}>
-            <FontAwesomeIcon icon={faCartShopping} className={styles.headerIcon} onClick={toogleModal}/>
+            <FontAwesomeIcon icon={faCartShopping} className={styles.headerIcon} onClick={toogleModal} />
             {
                 drinks.map((drink) => (
-                    <DrinkCard key={drink.idDrink} drink={drink}/>
+                    <DrinkCard key={drink.idDrink} drink={drink} />
                 ))
             }
         </section>

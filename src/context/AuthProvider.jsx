@@ -2,66 +2,66 @@ import { useState, useEffect, createContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 import PropTypes from 'prop-types'
-import {userLogin, userRegister} from '../services/user.service'
+import { userLogin, userRegister } from '../services/user.service'
 
 
 const AuthContext = createContext();
 
-function AuthProvider ({ children }){
-    
+function AuthProvider({ children }) {
+
     const navigate = useNavigate();
-    const [ currentUser, setCurrentUser ] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
     const storedToken = localStorage.getItem("_token")
 
     useEffect(() => {
-        if(storedToken){
+        if (storedToken) {
             const decodeToken = storedToken ? jwt_decode(storedToken) : null;
-                    const { user } = decodeToken ? decodeToken : null
-                    setCurrentUser(user);
-                    return navigate("/")
+            const { user } = decodeToken ? decodeToken : null
+            setCurrentUser(user);
+            return navigate("/")
         }
     }, [])
 
-    function register(data){
+    function register(data) {
         userRegister(data)
             .then((res) => {
-                if(res.ok){
+                if (res.ok) {
                     alert(res.message)
                     setTimeout(() => {
                         navigate("/login")
                     }, 1000);
                     return
-                }else{
+                } else {
                     return Promise.reject(res)
                 }
             })
             .catch(error => alert(error))
     }
-    function login(data){
+    function login(data) {
         userLogin(data)
             .then((res) => {
-                if(res.ok){
+                if (res.ok) {
                     window.localStorage.setItem("_token", res.token);
                     const decodeToken = res.token ? jwt_decode(res.token) : null;
                     const { user } = decodeToken ? decodeToken : null
                     setCurrentUser(user);
                     return navigate("/")
-                }else{
-                    console.log("respuesta",res);
+                } else {
+                    console.log("respuesta", res);
                     return Promise.reject(res)
                 }
             })
             .catch(error => alert(error))
     }
 
-    function logout () {
+    function logout() {
         setCurrentUser(null);
         localStorage.removeItem("_token");
         localStorage.removeItem("_theme");
         navigate("/login")
     }
 
-    const values ={
+    const values = {
         currentUser,
         login,
         register,
@@ -76,4 +76,4 @@ function AuthProvider ({ children }){
 AuthProvider.propTypes = {
     children: PropTypes.node.isRequired
 }
-export {AuthContext, AuthProvider}
+export { AuthContext, AuthProvider }

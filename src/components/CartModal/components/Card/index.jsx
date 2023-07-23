@@ -6,14 +6,14 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 
-export const ModalCard = ({drink}) =>{
+export const ModalCard = ({ drink }) => {
 
     const { removeOneCart, addToCart, removeAllFromCart } = useCart()
 
-    return(
+    return (
         <article className={styles.card}>
             <div className={styles.cardHeader}>
-                <img src={drink.strDrinkThumb} alt=''/>
+                <img src={drink.strDrinkThumb} alt='' />
             </div>
             <div className={styles.cardBody}>
                 <span>{drink.strDrink}</span>
@@ -21,10 +21,10 @@ export const ModalCard = ({drink}) =>{
                 <div className={styles.counter}>
                     <button onClick={() => removeOneCart(drink.idDrink)}>-</button>
                     <span>{drink.quantity}</span>
-                    <button onClick={()=>addToCart(drink)}>+</button>
+                    <button onClick={() => addToCart(drink)}>+</button>
                 </div>
             </div>
-            <FontAwesomeIcon className={styles.cardIcon} icon={faTrash} onClick={() => removeAllFromCart(drink.idDrink)}/>
+            <FontAwesomeIcon className={styles.cardIcon} icon={faTrash} onClick={() => removeAllFromCart(drink.idDrink)} />
         </article>
     )
 }

@@ -1,0 +1,34 @@
+.notFoundContainer{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+.alertIcon{
+    font-size: 8rem;
+    color: var(--secundaryColor);
+}
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid var(--secundaryColor);
+    padding: 1rem 1.3rem;
+    animation: brillo 2s ease-in  infinite alternate ;
+}
+
+@keyframes brillo{
+    from{
+        filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.51));
+    }
+    to{
+        filter: drop-shadow(0 3px 13px rgba(255, 255, 255, 0.871));
+    }
+}

@@ -27,12 +27,12 @@ export default function SignIn() {
         secundary: theme.light[1]
     };
 
-    
+
 
     return (
         <main className={styles.signIn}>
             <ThemeProvider theme={defaultTheme}>
-                <Container maxWidth="xs" sx={{ backgroundColor: colors.main, mt:6, mb:5 }}>
+                <Container maxWidth="xs" sx={{ backgroundColor: colors.main, mt: 6, mb: 5 }}>
                     <CssBaseline />
                     <Box
                         sx={{
@@ -123,14 +123,16 @@ export default function SignIn() {
                                             type="submit"
                                             fullWidth
                                             variant="contained"
-                                            sx={{ mt: 3,
+                                            sx={{
+                                                mt: 3,
                                                 mb: 2,
-                                                backgroundColor:colors.secundary,
-                                                "&_:hover":colors.main }}
+                                                backgroundColor: colors.secundary,
+                                                "&_:hover": colors.main
+                                            }}
                                         >
                                             Iniciar
                                         </Button>
-                                        <Grid container sx={{mt:3,mb:4}}>
+                                        <Grid container sx={{ mt: 3, mb: 4 }}>
                                             <Grid item>
                                                 <Link to="/register" variant="body2" className={styles.links}>
                                                     {"No tienes cuenta? Registrate"}

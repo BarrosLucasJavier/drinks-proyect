@@ -4,11 +4,11 @@ import { getCategoriesService } from '../services/categories.service';
 
 export const CategoriesContext = createContext();
 
-export const CategoriesProvider = ({ children }) =>{
+export const CategoriesProvider = ({ children }) => {
 
     const [categories, setCategories] = useState([]);
 
-    const getCategories = async () =>{
+    const getCategories = async () => {
         try {
             const categoriesData = await getCategoriesService();
             setCategories(categoriesData);
@@ -22,7 +22,7 @@ export const CategoriesProvider = ({ children }) =>{
     }, []);
 
     return (
-        <CategoriesContext.Provider value={{categories}}>
+        <CategoriesContext.Provider value={{ categories }}>
             {children}
         </CategoriesContext.Provider>
     )

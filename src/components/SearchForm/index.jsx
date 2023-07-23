@@ -1,8 +1,8 @@
-import { Formik, Field, ErrorMessage} from 'formik';
+import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useCategories } from '../../hooks/useCategory';
 import { useDrinks } from '../../hooks/useDrinks';
-import style from  './SearchForm.module.css'
+import style from './SearchForm.module.css'
 
 const SearchForm = () => {
 
@@ -10,8 +10,8 @@ const SearchForm = () => {
     const { getDrink, loading } = useDrinks();
 
     const initialValues = {
-        name:"",
-        categories:""
+        name: "",
+        categories: ""
     }
 
     const validationSchema = Yup.object({
@@ -19,7 +19,7 @@ const SearchForm = () => {
         category: Yup.string().required("Selecciona una categoria")
     })
 
-    const handleSubmit = (values) =>{
+    const handleSubmit = (values) => {
         getDrink(values)
     }
 
@@ -30,7 +30,7 @@ const SearchForm = () => {
             onSubmit={handleSubmit}
         >
             {
-                (formik)=>(
+                (formik) => (
                     <form onSubmit={formik.handleSubmit} className={style.formContainer}>
                         {
                             formik.status && (
@@ -61,7 +61,7 @@ const SearchForm = () => {
                             >
                                 <option disabled>-Seleccione Categoria-</option>
                                 {
-                                    categories.map((category)=>(
+                                    categories.map((category) => (
                                         <option key={category.strCategory} value={category.strCategory}>
                                             {category.strCategory}
                                         </option>
@@ -78,7 +78,7 @@ const SearchForm = () => {
                                 className=''
                                 type='submit'
                                 disabled={loading}
-                            >{ loading ? "Buscando..." : "Buscar Bebidas" }</button>
+                            >{loading ? "Buscando..." : "Buscar Bebidas"}</button>
                         </div>
                     </form>
                 )

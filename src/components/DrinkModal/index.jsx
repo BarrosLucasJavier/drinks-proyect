@@ -5,7 +5,7 @@ const DrinkModal = () => {
 
     const { handleModalClick, recipe, modal } = useDrinks();
 
-    const showIngredients = () =>{
+    const showIngredients = () => {
         let ingredients = [];
 
         for (let index = 1; index < 16; index++) {
@@ -16,7 +16,7 @@ const DrinkModal = () => {
                     </li>
                 )
             }
-            
+
         }
         return ingredients;
     }
@@ -25,7 +25,7 @@ const DrinkModal = () => {
             <div className={styles.modalContainer} onClick={handleModalClick}>
                 <div className={styles.recipeContainer}>
                     <div className={styles.recipeHeader}>
-                        <img src={recipe.strDrinkThumb} alt={`Imagen receta ${recipe.strDrink}`}/>
+                        <img src={recipe.strDrinkThumb} alt={`Imagen receta ${recipe.strDrink}`} />
                     </div>
                     <div className={styles.recipeBody}>
                         <h2>{recipe.strDrink}</h2>
@@ -40,7 +40,7 @@ const DrinkModal = () => {
             </div>
         )
     }
-    
+
 }
 
 export default DrinkModal;

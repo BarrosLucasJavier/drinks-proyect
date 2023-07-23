@@ -1,26 +1,26 @@
-import { useState, useEffect, createContext} from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { getRecipeService, filterDrinksService } from '../services/drink.service';
 import PropTypes from 'prop-types';
 
 
 export const DrinksContext = createContext();
 
-export const DrinksProvider = ({ children }) =>{
+export const DrinksProvider = ({ children }) => {
     const [drinks, setDrinks] = useState([]);
     const [modal, setModal] = useState(false);
     const [drinkId, setDrinkId] = useState(null);
     const [recipe, setRecipe] = useState({});
     const [loading, setLoading] = useState(false);
 
-    const handleModalClick = () =>{
+    const handleModalClick = () => {
         setModal(!modal);
     }
 
-    const handleDrinkIdClick = (id) =>{
+    const handleDrinkIdClick = (id) => {
         setDrinkId(id);
     }
 
-    const getRecipe = async () =>{
+    const getRecipe = async () => {
         if (!drinkId) return;
 
         try {
@@ -29,16 +29,16 @@ export const DrinksProvider = ({ children }) =>{
             setRecipe(recipeData)
         } catch (error) {
             console.error(error);
-        }finally{
+        } finally {
             setLoading(false)
         }
     }
 
-    const getDrink = async (data) =>{
+    const getDrink = async (data) => {
         try {
             setLoading(true);
             const drinksData = await filterDrinksService(data.name, data.category);
-            const drinksWithPrice = drinksData.map((drink)=>{
+            const drinksWithPrice = drinksData.map((drink) => {
                 return {
                     ...drink,
                     price: Math.floor(Math.random() * 101),
@@ -47,13 +47,13 @@ export const DrinksProvider = ({ children }) =>{
             setDrinks(drinksWithPrice)
         } catch (error) {
             console.error(error);
-        }finally{
+        } finally {
             setLoading(false)
         }
     }
 
     useEffect(() => {
-        getRecipe();    
+        getRecipe();
     }, [drinkId]);
 
     const drinksValues = {

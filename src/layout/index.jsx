@@ -5,11 +5,11 @@ import CartModal from '../components/CartModal';
 
 const MainLayout = ({ children }) => {
     return (
-        <>  
-            <Header/>
+        <>
+            <Header />
             {children}
-            <CartModal/>
-            <Footer/>
+            <CartModal />
+            <Footer />
         </>
     );
 }

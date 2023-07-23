@@ -7,11 +7,11 @@ import Themes from "../../components/Themes";
 const Home = () => {
     return (
         <main>
-            <BarUser/>
-            <SearchForm/>
-            <DrinksList/>
-            <DrinkModal/>
-            <Themes/>
+            <BarUser />
+            <SearchForm />
+            <DrinksList />
+            <DrinkModal />
+            <Themes />
         </main>
     );
 }

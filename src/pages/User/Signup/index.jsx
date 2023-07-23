@@ -21,7 +21,7 @@ export default function SignUp() {
     const { theme } = useTheme()
     const colors = {
         main: theme.dark[1],
-        secundary:theme.light[1]
+        secundary: theme.light[1]
     };
     const { register } = useAuth();
 
@@ -37,7 +37,7 @@ export default function SignUp() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: colors.secundary, color:colors.main }}>
+                    <Avatar sx={{ m: 1, bgcolor: colors.secundary, color: colors.main }}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
@@ -47,7 +47,7 @@ export default function SignUp() {
                         initialValues={{
                             name: "",
                             email: "",
-                            password:""
+                            password: ""
                         }}
                         validate={
                             (values) => {
@@ -82,7 +82,7 @@ export default function SignUp() {
                                 handleBlur,
                                 handleSubmit
                             }) => (
-                                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3, mb:3}} className={styles.singupContainer}>
+                                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3, mb: 3 }} className={styles.singupContainer}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <TextField
@@ -98,10 +98,10 @@ export default function SignUp() {
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                                 helperText={errors.name && touched.name && errors.name}
-                                                sx={{ 
-                                                input : {color:colors.secundary},
-                                                label: {color:colors.secundary}
-                                                }} 
+                                                sx={{
+                                                    input: { color: colors.secundary },
+                                                    label: { color: colors.secundary }
+                                                }}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -117,10 +117,10 @@ export default function SignUp() {
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                                 helperText={errors.email && touched.email && errors.email}
-                                                sx={{ 
-                                                input : {color:colors.secundary},
-                                                label: {color:colors.secundary}
-                                                }} 
+                                                sx={{
+                                                    input: { color: colors.secundary },
+                                                    label: { color: colors.secundary }
+                                                }}
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -136,10 +136,10 @@ export default function SignUp() {
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                                 helperText={errors.password && touched.password && errors.password}
-                                                sx={{ 
-                                                input : {color:colors.secundary},
-                                                label: {color:colors.secundary}
-                                                }} 
+                                                sx={{
+                                                    input: { color: colors.secundary },
+                                                    label: { color: colors.secundary }
+                                                }}
                                             />
                                         </Grid>
                                     </Grid>
@@ -147,7 +147,7 @@ export default function SignUp() {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2 , backgroundColor:colors.secundary}}
+                                        sx={{ mt: 3, mb: 2, backgroundColor: colors.secundary }}
                                     >
                                         Registrarme
                                     </Button>

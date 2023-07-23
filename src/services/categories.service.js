@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
-export const getCategoriesService = async () =>{
+export const getCategoriesService = async () => {
     try {
         const url = `${apiUrl}list.php?c=list`;
         const { data } = await axios.get(url);

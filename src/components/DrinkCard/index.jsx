@@ -8,7 +8,7 @@ import { faBookOpen, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const DrinkCard = ({ drink }) => {
 
-    const { handleModalClick, handleDrinkIdClick} = useDrinks();
+    const { handleModalClick, handleDrinkIdClick } = useDrinks();
     const { addToCart } = useCart();
 
     const handleAddToCart = (drink) => {
@@ -19,22 +19,22 @@ const DrinkCard = ({ drink }) => {
     return (
         <div className={styles.cardContainer}>
             <div className={styles.cardImg}>
-                <img src={drink.strDrinkThumb} alt={`Imagen de ${drink.strDrink}`}/>
+                <img src={drink.strDrinkThumb} alt={`Imagen de ${drink.strDrink}`} />
             </div>
             <div className={styles.infoContainer}>
                 <h3>{drink.strDrink}</h3>
                 <div className={styles.recipe}>
                     <span>$ {drink.price}</span>
-                    <FontAwesomeIcon className={styles.recipeIcon} icon={faBookOpen} onClick={() =>{
+                    <FontAwesomeIcon className={styles.recipeIcon} icon={faBookOpen} onClick={() => {
                         handleModalClick();
                         handleDrinkIdClick(drink.idDrink)
-                    }}/>
+                    }} />
                 </div>
                 <button
                     className=''
                     onClick={() => handleAddToCart(drink)}
                 >
-                    <FontAwesomeIcon icon={faCartShopping}/>
+                    <FontAwesomeIcon icon={faCartShopping} />
                     Agregar al Carrito
                 </button>
             </div>
@@ -42,7 +42,7 @@ const DrinkCard = ({ drink }) => {
     );
 }
 
-DrinkCard.propTypes ={
+DrinkCard.propTypes = {
     drink: PropTypes.shape({
         strDrinkThumb: PropTypes.string.isRequired,
         strDrink: PropTypes.string.isRequired,
